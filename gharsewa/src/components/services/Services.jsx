@@ -15,7 +15,7 @@ export default function Services() {
     <div>
       <Typography variant='h3' align='center' style={{marginTop:25}}> Our Services </Typography>
 
-      <Card1 />
+      <Card1 title="Food Delivery"/>
     </div>
   );
 }
