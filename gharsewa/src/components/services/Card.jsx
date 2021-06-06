@@ -24,7 +24,7 @@ export default function CardPhoto(props) {
                         />
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            {this.props.title}
+                            {props.title}
                         </Typography>
 
                         <Typography variant="body2" color="textSecondary" component="p">
