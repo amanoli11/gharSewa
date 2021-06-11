@@ -1,0 +1,36 @@
+TIPS 1: Split components inside UI.
+
+navbar => direction : column; justify: flex-start; alignItems: flex-start;
+coverpage => direction : column; justify: flex-start; alignItems: flex-start;
+content => direction : column; justify: flex-start; alignItems: flex-start;
+
+Example:
+
+<Grid container direction='column>
+	<Grid item>NAV BAR</Grid>
+	<Grid item container>
+
+		<Typography variant="subtitle1" gutterBottom>
+        		Material-UI Grid:
+      		</Typography>
+
+		<Grid item xs={0} sm={2} />//xs=extra small, sm=small media
+
+		<Grid item xs={8}>
+			Services Cards
+			contents
+		</Grid>
+
+		<Grid item xs={0} sm={2} />
+
+	</Grid>
+</Grid>
+
+NOTE: <Grid container spacing={3}>
+
+NOTE:   <body style="margin-top: -4%;">
+ in index.html to margin top of nav bar gap
+
+
+
+
