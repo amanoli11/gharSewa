@@ -13,7 +13,7 @@ export default function Navbar() {
     <AppBar position="static" color="primary">
       <Toolbar>
         <IconButton edge="start" className='menuButton' color="inherit" aria-label="menu">
-          <MenuIcon />
+          <MenuIcon></MenuIcon>
         </IconButton>
         <Typography variant="h6" className='title'>
           gharSewa.
