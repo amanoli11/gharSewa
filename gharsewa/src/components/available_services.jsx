@@ -19,48 +19,45 @@ export default function AvailableService(){
 
     return(
         <React.Fragment>
-        <div><h3 className={classes.title}>AVAILABLE SERVICES:</h3></div>
+            <div>
+                <h3 className={classes.title}>AVAILABLE SERVICES:
+                </h3>
+            </div>
 
-        <div className={classes.root}>
-        <Grid container spacing={2}>
-
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Plummer"/>
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-
-        </Grid>
-        </div>
-        
+            <div className={classes.root}>
+                <Grid container spacing={2}>
+                    <Grid item xs={3}>
+                        <ServicesCard image ={coverImage} title="Plummer"/>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <ServicesCard image ={coverImage} title="Electrical" />
+                    </Grid>
+                    <Grid item xs={3}>
+                        <ServicesCard image ={coverImage} title="Electrical" />
+                    </Grid>
+                    <Grid item xs={3}>
+                        <ServicesCard image ={coverImage} title="Electrical" />
+                    </Grid>
+                </Grid>
+            </div>
+            
 {/* ---------------------------------------------------------------------- */}
-        <div className={classes.root}>
-        <Grid container spacing={2}>
-
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Plummer" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-
-        </Grid>
-        </div>
-
-        </React.Fragment>
-        
+            <div className={classes.root}>
+                <Grid container spacing={2}>
+                    <Grid item xs={3}>
+                        <ServicesCard image ={coverImage} title="Plummer" />
+                    </Grid>
+                    <Grid item xs={3}>
+                        <ServicesCard image ={coverImage} title="Electrical" />
+                    </Grid>
+                    <Grid item xs={3}>
+                        <ServicesCard image ={coverImage} title="Electrical" />
+                    </Grid>
+                    <Grid item xs={3}>
+                        <ServicesCard image ={coverImage} title="Electrical" />
+                    </Grid>
+                </Grid>
+            </div>
+        </React.Fragment>   
     );
 }

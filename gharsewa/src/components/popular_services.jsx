@@ -9,11 +9,8 @@ const useStyles = makeStyles((theme) => ({
     root: {
         height:"100%",
         width:"95%",
-        // marginLeft:"10%",
         boxShadow: 'rgba(255, 0, 0, 0.117647) 0px 1px 6px, rgba(255, 0, 0, 0.117647) 0px 1px 4px',
         borderRadius: 14,
-        // backgroundColor: theme.palette.primary.light,
-        // color: theme.palette.primary.contrastText,
     },
     titles: {
       textAlign:"left",
@@ -24,12 +21,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft:"6%",
         marginTop:"4%",
         letterSpacing:'1px',
-    },
-    media: {
-        height: 330,
-        
-    },
-    
+    },   
   }));
 
   
@@ -45,22 +37,27 @@ export default function PopularServices(props){
     return(
         <Grid container>
             <Grid item xs={0} sm={1}/>
+
             <Grid item xs={5} sm={2}>
                <Card className={classes.root} variant="outlined">
-                <CardContent>
-                <Typography className={classes.titles} variant="h6">
-                   Our Services:
-                </Typography>
-                <Typography className={classes.services}>{listItems}</Typography>
-                </CardContent>
+                    <CardContent>
+                        <Typography className={classes.titles} variant="h6">
+                        Our Services:
+                        </Typography>
+
+                        <Typography className={classes.services}>
+                            {listItems}
+                        </Typography>
+                    </CardContent>
                </Card>
-               
             </Grid>
 
             <Grid item xs={7} sm={8} >
                 <img src={coverImage} height="100%" width="100%" className={classes.root}/>
             </Grid>
-            <Grid item xs={0} sm={1} />          
+
+            <Grid item xs={0} sm={1} />  
+                    
         </Grid>
     );
 }

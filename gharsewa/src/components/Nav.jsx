@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,6 +10,11 @@ import Menu from '@material-ui/core/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Drawer from './Drawer.jsx';
+import Popover from '@material-ui/core/Popover';
+import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
+import Login from './login_form';
+import SignUp from './signup_form.jsx';
+// -----------------------------------------------------
 
 
 const useStyles = makeStyles((theme) => ({
@@ -39,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
-    width: '100%',
 
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(3),
@@ -83,10 +87,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// -----------------------------------------------------
+
+
 export default function Nav(){
-
-  
-
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -135,31 +139,85 @@ export default function Nav(){
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-
+{/* LOGIN AND SIGN UP FORM IN MOBILE VIEW  */}
       <MenuItem>
-        <Typography>Log in</Typography>
+      <PopupState variant="power" popupId="demo-popup-popover">
+              {(popupState) => (
+                <div>
+                <IconButton color="inherit" {...bindTrigger(popupState)} >
+                    <Typography>Log in</Typography> 
+                  </IconButton>
+  
+                  <Popover
+                    {...bindPopover(popupState)}
+                    anchorOrigin= {{
+                      vertical: 'bottom',
+                      horizontal: 'center',
+                    }}
+                    transformOrigin={{
+                      vertical:'top',
+                      horizontal:'center',
+                    }}
+                    >
+                    <div>
+                  <Login />
+                </div>
+
+                </Popover>
+                </div>
+
+              )}
+          </PopupState>
       </MenuItem>
 
       <MenuItem >
-      <Typography>Sign in</Typography>
+      <PopupState variant="power" popupId="demo-popup-popover">
+              {(popupState) => (
+                <div>
+                  <IconButton color="inherit" {...bindTrigger(popupState)} >
+                      <Typography>Sign in</Typography> 
+                  </IconButton>
+    
+                  <Popover
+                      {...bindPopover(popupState)}
+                      anchorOrigin= {{
+                        vertical: 'bottom',
+                        horizontal: 'center',
+                      }}
+                      transformOrigin={{
+                        vertical:'top',
+                        horizontal:'center',
+                      }}
+                      >
+                      <div>
+                        <SignUp />
+                      </div>
+                  </Popover>
+                </div>
+
+              )}
+          </PopupState>
       </MenuItem>
 
     </Menu>
-  
+  // ......................................
   );
-
 
   return (
     <div className={classes.grow}>
       <AppBar position="static"  className={classes.root}>
 
         <Toolbar>
-        <Drawer />
+        {/* THIS Drawer is for left swipe nav bar */}
+          <Drawer />
+
+        {/* LOGO CAN BE KEPT HERE  */}
           <Typography className={classes.title} variant="h6" noWrap>
             Ghar Sewa
           </Typography>
 
-          <div className={classes.search} style={{marginLeft:'30%',paddingRight:'10%'}}>
+        {/* SEARCH ICON  */}
+          <div className={classes.search} >
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -173,19 +231,71 @@ export default function Nav(){
             />
           </div>
 
+          {/* FOR LOG IN AND SIGN UP IN WEB */}
           <div className={classes.grow} />
           
           <div className={classes.sectionDesktop}>
-            <IconButton color="inherit">
-              <Typography>Log in</Typography> 
-            </IconButton>
-
-            <IconButton color="inherit">
-              <Typography>Sign in</Typography>
-            </IconButton>
+          {/* FOR LOG IN  */}
+          <PopupState variant="power" popupId="demo-popup-popover">
+              {(popupState) => (
+                <div>
+                  <IconButton color="inherit" {...bindTrigger(popupState)} >
+                    <Typography>
+                    Log in
+                    </Typography> 
+                  </IconButton>
     
-          </div>
+                  <Popover
+                    {...bindPopover(popupState)}
+                      anchorOrigin= {{
+                      vertical: 'bottom',
+                      horizontal: 'center',
+                    }}
+                      transformOrigin={{
+                      vertical:'top',
+                      horizontal:'center',
+                    }}
+                  >  
+                    <div>
+                      {/* LOGIN FORM  */}
+                      <Login />
+                    </div>
+                  </Popover>
+                </div>
 
+              )}
+          </PopupState>
+
+          {/* FOR SIGN UP  */}
+          <PopupState variant="power" popupId="demo-popup-popover">
+              {(popupState) => (
+                <div>
+                  <IconButton color="inherit" {...bindTrigger(popupState)} >
+                      <Typography>Sign in</Typography> 
+                  </IconButton>
+    
+                  <Popover
+                    {...bindPopover(popupState)}
+                      anchorOrigin= {{
+                      vertical: 'bottom',
+                      horizontal: 'center',
+                    }}
+                      transformOrigin={{
+                      vertical:'top',
+                      horizontal:'center',
+                    }}
+                  >
+                    <div>
+                      <SignUp />
+                    </div>
+                  </Popover>
+                </div>
+
+              )}
+          </PopupState>
+          </div>
+          
+          {/* MOBILE VIEW ICON  */}
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
@@ -197,13 +307,13 @@ export default function Nav(){
               <MoreIcon /> 
             </IconButton>
           </div>
+
         </Toolbar>
       </AppBar>
+      
+      {/* FUNCTION  */}
       {renderMobileMenu}
       {renderMenu}
-
-      
-
     </div>
   );
 }

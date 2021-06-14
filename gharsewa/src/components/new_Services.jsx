@@ -17,41 +17,46 @@ export default function NewService(){
 
     return(
         <React.Fragment>
-        <div><h3 className={classes.title}>NEWLY ADDED SERVICES:</h3></div>
-        <Grid container spacing={2}>
+            <div>
+            <h3 className={classes.title}>
+            NEWLY ADDED SERVICES:
+            </h3>
+            </div>
+            <Grid container spacing={2}>
+                <Grid item xs={3}>
+                    <ServicesCard image ={coverImage} title="Food Delivery" />
+                </Grid>
 
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Food Delivery" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
+                <Grid item xs={3}>
+                    <ServicesCard image ={coverImage} title="Electrical" />
+                </Grid>
 
-        </Grid>
+                <Grid item xs={3}>
+                    <ServicesCard image ={coverImage} title="Electrical" />
+                </Grid>
 
-        <Grid container spacing={2} style={{marginTop:"4%"}}>
+                <Grid item xs={3}>
+                    <ServicesCard image ={coverImage} title="Electrical" />
+                </Grid>
+            </Grid>
 
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Food Delivery" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
-        <Grid item xs={3}>
-        <ServicesCard image ={coverImage} title="Electrical" />
-        </Grid>
+            <Grid container spacing={2} style={{marginTop:"4%"}}>
+                <Grid item xs={3}>
+                    <ServicesCard image ={coverImage} title="Food Delivery" />
+                </Grid>
 
-        </Grid>
+                <Grid item xs={3}>
+                    <ServicesCard image ={coverImage} title="Electrical" />
+                </Grid>
 
+                <Grid item xs={3}>
+                    <ServicesCard image ={coverImage} title="Electrical" />
+                </Grid>
+
+                <Grid item xs={3}>
+                    <ServicesCard image ={coverImage} title="Electrical" />
+                </Grid>
+            </Grid>
         </React.Fragment>
         
     );

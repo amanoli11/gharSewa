@@ -1,15 +1,14 @@
-.TITLE {
+/* .TITLE {
     text-decoration: none;
     color: white;
 }
 
 .TITLE:hover {
     color: black;
-}
+} */
 
 .footer{
     margin-top: 1rem;
-    padding: 1rem;
     background-color: #484848;
     /* position: fixed; */
     bottom: 0;

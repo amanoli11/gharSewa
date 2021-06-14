@@ -33,15 +33,15 @@ export default function Drawer() {
              onClick={() => setOpen(true)}>
              {/* style={{backgroundColor:"white"}} */}
                 <DehazeIcon/>
-          </IconButton>
+            </IconButton>
 
             <SwipeableDrawer
-            anchor="left"
-            open={open}
-            onClose={() => setOpen(false)}
-            onOpen={()=> {}}
-            
+                anchor="left"
+                open={open}
+                onClose={() => setOpen(false)}
+                onOpen={()=> {}}    
             >
+
             <div className={classes.list}>
                 <Box textAlign="center" p={2} className={classes.root} >
                     GHAR SEWA
@@ -61,12 +61,8 @@ export default function Drawer() {
                         <ListItemText primary={"HOME"}/>
                     </ListItem>
                 </List>
-
             </div>
-
-            </SwipeableDrawer>
-
-            
+            </SwipeableDrawer>  
         </div>
     );
 }
