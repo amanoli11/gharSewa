@@ -1,0 +1,75 @@
+.TITLE {
+    text-decoration: none;
+    color: white;
+}
+
+.TITLE:hover {
+    color: black;
+}
+
+.footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #484848;
+    /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 4%;
+  }
+
+.logo img {
+    height: 60%;
+    width: 40%;
+    margin: 25% 2% 0 0;
+}
+
+.heading {
+    text-align: left;
+    letter-spacing: 3px;
+    color: beige;
+}
+
+.sites_name{
+    color: beige;
+    text-align: center;
+}
+.social-media1 img{
+    margin-top: 40%;
+    height: 40%;
+    width: 40%;
+}
+
+.social-media1:hover{
+    height: 60%;
+    width: 40%;
+}
+
+
+.social-media2 img{
+    margin-top: 40%;
+    height: 40%;
+    width: 40%;
+}
+.social-media3 img{
+    margin-top: 40%;
+    height: 40%;
+    width: 40%;
+}
+
+.social-media4 img{
+    margin-top: 20%;
+    height: 40%;
+    width: 40%;
+}
+
+.social-media5 img{
+    margin-top: 20%;
+    height: 40%;
+    width: 40%;
+}
+.social-media6 img{
+    margin-top: 20%;
+    height: 40%;
+    width: 40%;
+}
