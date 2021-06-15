@@ -9,13 +9,16 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
+import { Link, Router } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+
 
 const useStyles = makeStyles({
     root: {
-      minWidth: 300,
-      '&:hover': {
-        background: 'lightGreen',
-    },
+        minWidth: 300,
+        '&:hover': {
+            background: 'lightGreen',
+        },
     },
     btn: {
         background: 'transparent',
@@ -25,14 +28,15 @@ const useStyles = makeStyles({
         },
     },
 
-  });
+});
 
 export default function CardPhoto(props) {
     const classes = useStyles();
+
     return (
         <div>
             <Card className={classes.root}>
-                <CardActionArea style={{minHeight: 320}}>
+                <CardActionArea style={{ minHeight: 320 }}>
                     <CardMedia
                         component="img"
                         alt="Contemplative Reptile"
@@ -48,15 +52,17 @@ export default function CardPhoto(props) {
                             {props.description}
                         </Typography>
                     </CardContent>
-                </CardActionArea>
+                </CardActionArea>                
 
                 <CardActions>
-                    <Button className={classes.btn} size="medium" color="secondary" variant='outlined'>
-                        Learn More
-                    </Button>
+                    
+                        <a href='/orderservices' style={{textDecoration:'none'}}>
+                        <Button className={classes.btn} size="medium" color="secondary" variant='outlined'>
+                            Order Now
+                        </Button></a>
+                    
                 </CardActions>
             </Card>
-            
         </div>
     );
 }

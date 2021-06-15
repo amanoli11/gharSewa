@@ -40,10 +40,11 @@ export default function About() {
                     <div className={classes.container}>
                         <Grow in={checked}>
                             <Typography>
-                                <ul>
-                                <li>Birtamode</li>
-                                <li>Bhadrapur</li>
-                                <li>Arjundhara</li></ul>
+                                <ul style={{listStyle:'none'}}>
+                                    <li>Birtamode</li>
+                                    <li>Bhadrapur</li>
+                                    <li>Arjundhara</li>
+                                </ul>
                             </Typography>
                         </Grow>
                         
@@ -52,15 +53,16 @@ export default function About() {
                             {...(checked ? { timeout: 1500 } : {})}
                         >
                             <Typography>
-                                <ul>
-                                <li>Damak</li>
-                                <li>Gauradaha</li>
-                                <li>Mechinagar</li></ul>
+                                <ul style={{listStyle:'none'}}>
+                                    <li>Damak</li>
+                                    <li>Gauradaha</li>
+                                    <li>Mechinagar</li>
+                                </ul>
                             </Typography>
                         </Grow>  
                     </div>
-                    <img src={require('../images/ghar.jpg').default} alt="image" style={{height:'auto', width: '100%'}} />
                 </div>
+                    <img src={require('../images/ghar.jpg').default} alt="image" style={{height:'auto', width: '100%', position:''}} />
             </Container>
         </div>
     )
